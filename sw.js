@@ -4,7 +4,7 @@ const urlsToCache = [
   '/',
   '/main.css',
   '/index.js'
-];
+].map(url => `/service-worker-test${url}`);
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME)
